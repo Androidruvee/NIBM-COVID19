@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3959431D250F638000EECAAC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959431C250F638000EECAAC /* LoginViewController.swift */; };
+		3959431F250F982C00EECAAC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959431E250F982C00EECAAC /* SignupViewController.swift */; };
 		39684A1D250D02F800339299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A1C250D02F800339299 /* AppDelegate.swift */; };
 		39684A1F250D02F800339299 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A1E250D02F800339299 /* SceneDelegate.swift */; };
 		39684A21250D02F800339299 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A20250D02F800339299 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3959431C250F638000EECAAC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3959431E250F982C00EECAAC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		39684A19250D02F800339299 /* NIBM COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM COVID19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39684A1C250D02F800339299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39684A1E250D02F800339299 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				39684A25250D030100339299 /* Assets.xcassets */,
 				39684A27250D030100339299 /* LaunchScreen.storyboard */,
 				39684A2A250D030100339299 /* Info.plist */,
+				3959431C250F638000EECAAC /* LoginViewController.swift */,
+				3959431E250F982C00EECAAC /* SignupViewController.swift */,
 			);
 			path = "NIBM COVID19";
 			sourceTree = "<group>";
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3959431D250F638000EECAAC /* LoginViewController.swift in Sources */,
 				39684A21250D02F800339299 /* ViewController.swift in Sources */,
+				3959431F250F982C00EECAAC /* SignupViewController.swift in Sources */,
 				39684A1D250D02F800339299 /* AppDelegate.swift in Sources */,
 				39684A1F250D02F800339299 /* SceneDelegate.swift in Sources */,
 			);

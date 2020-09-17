@@ -56,26 +56,6 @@ class HomeUIiewController:
 }
 
 
-class UpdateUIiewController:
-
-    UIViewController
-
-{
-
-    @IBOutlet weak var updateButton: UITabBarItem!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-
-
-}
-
-
-
-
 private extension MKMapView {
   func centerToLocation(
     _ location: CLLocation,

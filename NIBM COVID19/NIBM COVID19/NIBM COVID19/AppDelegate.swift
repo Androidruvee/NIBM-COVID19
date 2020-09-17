@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        tryAutoLogin()
         NSSetUncaughtExceptionHandler { exception in
            print(exception)
            print(exception.callStackSymbols)
@@ -36,7 +40,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    
+    func tryAutoLogin(){
+        let email = UserDefaults.standard.string(forKey: "email")
+        let password = UserDefaults.standard.string(forKey: "password")
+
+        if(email == "null" || email == nil){
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email!, password: password!) { [weak self] authResult, error in
+          guard let strongSelf = self else { return }
+            
+            if(error != nil) {
+                UserDefaults.standard.set("null", forKey: "id")
+                UserDefaults.standard.set("null", forKey: "email")
+                UserDefaults.standard.set("null", forKey: "password")
+                UserDefaults.standard.set(false, forKey: "is_logged")
+                
+                return
+            }
+            
+            UserDefaults.standard.set(true, forKey: "is_logged")
+        }
+    }
 
 
 }

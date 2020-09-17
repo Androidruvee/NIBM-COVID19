@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>582494818295-hedcnlmou0cr3n88ima1rg3rkmasvcb5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.582494818295-hedcnlmou0cr3n88ima1rg3rkmasvcb5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyChtW6qfl1zimzR1i-jY-0xWSl0Mtgtte8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>582494818295</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>lk.techwolves.NIBM-COVID19</string>
+	<key>PROJECT_ID</key>
+	<string>techbuff-1062</string>
+	<key>STORAGE_BUCKET</key>
+	<string>techbuff-1062.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:582494818295:ios:6df144a777a74d9b07a8f2</string>
+	<key>DATABASE_URL</key>
+	<string>https://techbuff-1062.firebaseio.com</string>
+</dict>
+</plist>

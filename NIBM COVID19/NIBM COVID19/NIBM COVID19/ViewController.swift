@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseFirestore
 
 
 class ViewController:
@@ -27,34 +28,59 @@ class ViewController:
 
 class HomeUIiewController:
 
-    UIViewController
+    UIViewController, CLLocationManagerDelegate
 
 {
-    private let locationManager = CLLocationManager()
+    var locationManager: CLLocationManager?
 
     @IBOutlet weak var textLabel: UILabel!
-    
-    
     
     @IBOutlet weak var nibmmapnew: MKMapView!
     
     @IBOutlet weak var notifyview: UIView!
     
+    @IBOutlet weak var infectedLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("home did load")
         
-        notifyview.layer.cornerRadius = 8    
-
+        notifyview.layer.cornerRadius = 8
         
-              
+         locationManager = CLLocationManager()
+         locationManager?.delegate = self
+         locationManager?.requestAlwaysAuthorization()
+        
+         let db = Firestore.firestore()
+           
+           db.collection("users").whereField("infected", in: [true]).getDocuments() { (querySnapshot, err) in
+               if let err = err {
+                   print("Error getting documents: \(err)")
+               } else {
+                self.infectedLabel.text = String(querySnapshot!.documents.count)
+               }
+           }
+        
        // Set initial location in NIBM
-        _ = CLLocation(latitude: 6.9063951, longitude: 79.8684273)
-              
+       // _ = CLLocation(latitude: 6.9063951, longitude: 79.8684273)
         
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (status == .authorizedAlways || status == .authorizedWhenInUse) {
+            locationManager?.startUpdatingLocation()
+        } else {
+            
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            print("New location is \(location)")
+        }
     }
 
 }
-
 
 private extension MKMapView {
   func centerToLocation(

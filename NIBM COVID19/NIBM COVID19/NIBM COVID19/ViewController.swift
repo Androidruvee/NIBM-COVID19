@@ -35,11 +35,12 @@ class HomeUIiewController:
 
     @IBOutlet weak var textLabel: UILabel!
     
-    @IBOutlet weak var nibmmapnew: MKMapView!
-    
     @IBOutlet weak var notifyview: UIView!
     
     @IBOutlet weak var infectedLabel: UILabel!
+    
+    @IBOutlet weak var map: MKMapView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,10 @@ class HomeUIiewController:
            }
         
        // Set initial location in NIBM
-       // _ = CLLocation(latitude: 6.9063951, longitude: 79.8684273)
+        //_ = CLLocation(latitude: 6.9063951, longitude: 79.8684273)
+       // center
+        
+        
         
     }
     
@@ -94,10 +98,3 @@ private extension MKMapView {
     setRegion(coordinateRegion, animated: true)
   }
 }
-
-
-
-
-
-
-

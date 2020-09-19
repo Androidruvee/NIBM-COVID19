@@ -7,28 +7,50 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
-   // @IBOutlet weak var logoutButton: UIButton!
+
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var profileText: UILabel!
+    @IBOutlet weak var profileButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       //logoutButton.layer.borderWidth = 1
-      // logoutButton.layer.borderColor = UIColor.black.cgColor
-      // logoutButton.layer.cornerRadius = 10.0
+     logoutButton.layer.borderWidth = 1
+      logoutButton.layer.borderColor = UIColor.black.cgColor
+      logoutButton.layer.cornerRadius = 10.0
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if(UserDefaults.standard.bool(forKey: "is_logged")){
+            profilePic.isHidden = false
+            profileText.isHidden = false
+            profileButton.isHidden = false
+            logoutButton.isHidden = false}
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func logoutBtn(_ sender: UIButton) {
+       do {
+        try Auth.auth().signOut()
+        UserDefaults.standard.set("null", forKey: "id")
+        UserDefaults.standard.set("null", forKey: "email")
+        UserDefaults.standard.set("null", forKey: "password")
+        UserDefaults.standard.set(false, forKey: "is_logged")
+        
+        profilePic.isHidden = true
+        profileText.isHidden = true
+        profileButton.isHidden = true
+        logoutButton.isHidden = true
+       } catch let signOutError as NSError {
+         print ("Error signing out: %@", signOutError)
+       }
+        
     }
-    */
-
+    
 }

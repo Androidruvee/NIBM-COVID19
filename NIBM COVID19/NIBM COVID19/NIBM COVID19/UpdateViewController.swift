@@ -57,6 +57,14 @@ class UpdateViewController: UIViewController {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool){
+        if(!UserDefaults.standard.bool(forKey: "is_logged")) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "loginView") as UIViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 
 
     @IBAction func updateButton(_ sender: UIButton) {

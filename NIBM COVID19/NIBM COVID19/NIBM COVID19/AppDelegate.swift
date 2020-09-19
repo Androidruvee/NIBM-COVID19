@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let password = UserDefaults.standard.string(forKey: "password")
 
         if(email == "null" || email == nil){
+            UserDefaults.standard.set(false, forKey: "is_logged")
             return
         }
         

@@ -30,13 +30,15 @@ class LoginViewController: UIViewController {
         createbtn.backgroundColor = UIColor.init(red: 221/255, green: 221/255, blue:221/255,alpha: 1)
         createbtn.layer.cornerRadius = 10.0
         createbtn.tintColor = UIColor.black
+  
+    }
     
+    override func viewWillAppear(_ animated: Bool){
         if(UserDefaults.standard.bool(forKey: "is_logged")) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "UpdateView") as UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
 
     
@@ -70,6 +72,7 @@ class LoginViewController: UIViewController {
           UserDefaults.standard.set(id!, forKey: "id")
           UserDefaults.standard.set(_email, forKey: "email")
           UserDefaults.standard.set(_password, forKey: "password")
+          UserDefaults.standard.set(true, forKey: "is_logged")
             
             self?.loginbtn.isEnabled = true
             self?.createbtn.isEnabled = true

@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  ProfileViewController.swift
 //  NIBM COVID19
 //
 //  Created by Ruvinda Lahiru Samaranayake on 9/18/20.
@@ -8,16 +8,17 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
-
-   // @IBOutlet weak var logoutButton: UIButton!
+class ProfileViewController: UIViewController {
+    
+    
+    @IBOutlet weak var updateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       //logoutButton.layer.borderWidth = 1
-      // logoutButton.layer.borderColor = UIColor.black.cgColor
-      // logoutButton.layer.cornerRadius = 10.0
+        updateButton.layer.borderWidth = 1
+        updateButton.layer.borderColor = UIColor.black.cgColor
+        updateButton.layer.cornerRadius = 10.0
     }
     
 

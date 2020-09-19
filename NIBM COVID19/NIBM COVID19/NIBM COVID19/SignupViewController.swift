@@ -62,7 +62,7 @@ class SignupViewController: UIViewController {
         if(_role == "student" || _role == "staff" || _role == "other"){
 
         } else {
-            errorlabel.text = "Invalid option"
+            errorlabel.text = "Invalid option in Role"
             errorlabel.isHidden = false
             return
         }

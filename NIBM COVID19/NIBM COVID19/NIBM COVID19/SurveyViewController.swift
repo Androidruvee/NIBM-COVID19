@@ -184,10 +184,13 @@ class Survey4ViewController: UIViewController, CLLocationManagerDelegate {
 
 class SurveyResultGViewController: UIViewController {
 
+    @IBOutlet weak var okayButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        okayButton.layer.borderWidth = 1
+        okayButton.layer.borderColor = UIColor.black.cgColor
+        okayButton.layer.cornerRadius = 10.0
     }
 
     @IBAction func callNow(_ sender: UIButton) {
@@ -197,10 +200,16 @@ class SurveyResultGViewController: UIViewController {
 
 class SurveyResultBViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var callNowBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        backButton.layer.borderWidth = 1
+        backButton.layer.borderColor = UIColor.black.cgColor
+        backButton.layer.cornerRadius = 10.0        
+
     }
     
     @IBAction func safeActions(_ sender: UIButton) {

@@ -145,13 +145,16 @@ class Survey4ViewController: UIViewController, CLLocationManagerDelegate {
         format.dateFormat = "MM-dd HH:mm"
         let datetime = format.string(from: date)
         
+        let lon: Double = (gps_location?.coordinate.longitude)!
+        let lat: Double = (gps_location?.coordinate.latitude)!
+        
         let ref = db.collection("users").document(id!)
         
         if(infected){
-            ref.updateData(["infected": true, "location":
-                ["lon": gps_location?.coordinate.longitude,
-                 "lat": gps_location?.coordinate.latitude],
-                            "last_time": datetime]){ err in
+            ref.updateData([
+                "infected": true,
+                "location": GeoPoint(latitude: lat, longitude: lon),
+                "last_time": datetime]){ err in
                 if let err = err {
                     print("Error updating document: \(err)")
                 } else {
@@ -163,10 +166,10 @@ class Survey4ViewController: UIViewController, CLLocationManagerDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "Warning") as UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
-            ref.updateData(["infected": false, "location":
-                ["lon": gps_location?.coordinate.longitude,
-                 "lat": gps_location?.coordinate.latitude],
-                            "last_time": datetime]){ err in
+            ref.updateData([
+                "infected": false,
+                "location": GeoPoint(latitude: lat, longitude: lon),
+                "last_time": datetime]){ err in
                 if let err = err {
                     print("Error updating document: \(err)")
                 } else {

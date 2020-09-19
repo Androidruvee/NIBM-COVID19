@@ -87,7 +87,9 @@ class UpdateViewController: UIViewController {
         let id = UserDefaults.standard.string(forKey: "id")
         
         let ref = db.collection("users").document(id!)
-        ref.updateData(["last_temp": temp, "last_time": datetime]){ err in
+        ref.updateData([
+            "last_temp": temp,
+            "last_time": datetime]){ err in
             if let err = err {
                 print("Error updating document: \(err)")
                 self.errorLabel.text = "Error occured"

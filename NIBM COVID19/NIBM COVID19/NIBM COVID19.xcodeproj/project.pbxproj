@@ -11,6 +11,8 @@
 		390FA2082513467E002534FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 390FA2072513467E002534FB /* GoogleService-Info.plist */; };
 		3959431D250F638000EECAAC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959431C250F638000EECAAC /* LoginViewController.swift */; };
 		3959431F250F982C00EECAAC /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959431E250F982C00EECAAC /* SignupViewController.swift */; };
+		396835672515A9F000CE77BD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396835662515A9F000CE77BD /* ProfileViewController.swift */; };
+		396835692515AB5800CE77BD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396835682515AB5800CE77BD /* SettingsViewController.swift */; };
 		39684A1D250D02F800339299 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A1C250D02F800339299 /* AppDelegate.swift */; };
 		39684A1F250D02F800339299 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A1E250D02F800339299 /* SceneDelegate.swift */; };
 		39684A21250D02F800339299 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A20250D02F800339299 /* ViewController.swift */; };
@@ -20,7 +22,6 @@
 		39684A34250D030100339299 /* NIBM_COVID19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A33250D030100339299 /* NIBM_COVID19Tests.swift */; };
 		39684A3F250D030100339299 /* NIBM_COVID19UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39684A3E250D030100339299 /* NIBM_COVID19UITests.swift */; };
 		396B9EF7251476CD00C3BFD5 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396B9EF6251476CD00C3BFD5 /* SurveyViewController.swift */; };
-		396B9EFB2514F6C000C3BFD5 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396B9EFA2514F6C000C3BFD5 /* SettingsTableViewController.swift */; };
 		398CA2C72511C37D00FB9AA6 /* SafeActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398CA2C52511C37D00FB9AA6 /* SafeActionsViewController.swift */; };
 		398CA2CA2511DA7A00FB9AA6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398CA2C92511DA7A00FB9AA6 /* View.swift */; };
 		398CA2CC2511DA8A00FB9AA6 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398CA2CB2511DA8A00FB9AA6 /* View.xib */; };
@@ -54,6 +55,8 @@
 		390FA2072513467E002534FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3959431C250F638000EECAAC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3959431E250F982C00EECAAC /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		396835662515A9F000CE77BD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		396835682515AB5800CE77BD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		39684A19250D02F800339299 /* NIBM COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM COVID19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39684A1C250D02F800339299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39684A1E250D02F800339299 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		39684A3E250D030100339299 /* NIBM_COVID19UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_COVID19UITests.swift; sourceTree = "<group>"; };
 		39684A40250D030100339299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		396B9EF6251476CD00C3BFD5 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
-		396B9EFA2514F6C000C3BFD5 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		398CA2C52511C37D00FB9AA6 /* SafeActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsViewController.swift; sourceTree = "<group>"; };
 		398CA2C92511DA7A00FB9AA6 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		398CA2CB2511DA8A00FB9AA6 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
@@ -149,7 +151,8 @@
 				398CA2C92511DA7A00FB9AA6 /* View.swift */,
 				398CA2CB2511DA8A00FB9AA6 /* View.xib */,
 				396B9EF6251476CD00C3BFD5 /* SurveyViewController.swift */,
-				396B9EFA2514F6C000C3BFD5 /* SettingsTableViewController.swift */,
+				396835662515A9F000CE77BD /* ProfileViewController.swift */,
+				396835682515AB5800CE77BD /* SettingsViewController.swift */,
 			);
 			path = "NIBM COVID19";
 			sourceTree = "<group>";
@@ -439,13 +442,14 @@
 				398CA2CA2511DA7A00FB9AA6 /* View.swift in Sources */,
 				3959431D250F638000EECAAC /* LoginViewController.swift in Sources */,
 				39684A21250D02F800339299 /* ViewController.swift in Sources */,
-				396B9EFB2514F6C000C3BFD5 /* SettingsTableViewController.swift in Sources */,
 				398CA2C72511C37D00FB9AA6 /* SafeActionsViewController.swift in Sources */,
 				396B9EF7251476CD00C3BFD5 /* SurveyViewController.swift in Sources */,
+				396835672515A9F000CE77BD /* ProfileViewController.swift in Sources */,
 				3959431F250F982C00EECAAC /* SignupViewController.swift in Sources */,
 				39684A1D250D02F800339299 /* AppDelegate.swift in Sources */,
 				39684A1F250D02F800339299 /* SceneDelegate.swift in Sources */,
 				39056C762510961100D8435A /* UpdateViewController.swift in Sources */,
+				396835692515AB5800CE77BD /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

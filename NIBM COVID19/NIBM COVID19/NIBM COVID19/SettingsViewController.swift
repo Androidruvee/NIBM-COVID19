@@ -31,7 +31,14 @@ class SettingsViewController: UIViewController {
             profilePic.isHidden = false
             profileText.isHidden = false
             profileButton.isHidden = false
-            logoutButton.isHidden = false}
+            logoutButton.isHidden = false
+            
+        } else {
+            profileButton.isHidden = true
+            profilePic.isHidden = true
+            profileText.isHidden = true
+            logoutButton.isHidden = true
+        }
     }
     
 
@@ -42,6 +49,7 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set("null", forKey: "email")
         UserDefaults.standard.set("null", forKey: "password")
         UserDefaults.standard.set(false, forKey: "is_logged")
+        UserDefaults.standard.set("null", forKey: "role")
         
         profilePic.isHidden = true
         profileText.isHidden = true

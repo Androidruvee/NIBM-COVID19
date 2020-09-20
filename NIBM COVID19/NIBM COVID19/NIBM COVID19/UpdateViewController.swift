@@ -27,10 +27,27 @@ class UpdateViewController: UIViewController {
     
     @IBOutlet weak var surveyDate: UILabel!
     
+    @IBOutlet weak var notifyBtn: UIButton!
+    
+    @IBOutlet weak var notificationView: UIView!
+    
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let role = UserDefaults.standard.string(forKey: "role")
+        if(role != nil){
+            print("update role")
+            print(role!)
+            if(role! == "staff"){
+                print("inside staff")
+                notificationView.isHidden = false
+            } else {
+                print("inside non staff")
+                notificationView.isHidden = true
+            }
+        }
         
         let id = UserDefaults.standard.string(forKey: "id")
         
@@ -56,6 +73,7 @@ class UpdateViewController: UIViewController {
                 print("Document does not exist")
             }
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool){
@@ -63,6 +81,20 @@ class UpdateViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "loginView") as UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        let role = UserDefaults.standard.string(forKey: "role")
+        
+        if(role != nil){
+            print("update role")
+            print(role!)
+            if(role! == "staff"){
+                print("inside staff")
+                notificationView.isHidden = false
+            } else {
+                print("inside non staff")
+                notificationView.isHidden = true
+            }
         }
     }
 

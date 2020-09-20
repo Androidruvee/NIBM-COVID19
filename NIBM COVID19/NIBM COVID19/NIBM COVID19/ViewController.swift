@@ -105,10 +105,13 @@ class HomeUIiewController:
             print(new_lon)
             
             db.collection("users").whereField("location", isLessThanOrEqualTo: GeoPoint(latitude: new_lat, longitude: new_lon))
+                .whereField("infected", isEqualTo: true)
                 .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
+
+                    
                      for document in querySnapshot!.documents {
                         if(document.documentID == UserDefaults.standard.string(forKey: "id")!){
                             return
@@ -158,7 +161,7 @@ class HomeUIiewController:
         if(title == "Me"){
             annotationView.image = UIImage(named: "myDot")
         } else if(title == "Infected"){
-            annotationView.image = UIImage(named: "infectedDot")
+            annotationView.image = UIImage(named: "userlocation1")
         }
         
         return annotationView

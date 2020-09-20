@@ -93,6 +93,7 @@ class SignupViewController: UIViewController {
             UserDefaults.standard.set(_email, forKey: "email")
             UserDefaults.standard.set(_password, forKey: "password")
             UserDefaults.standard.set(true, forKey: "is_logged")
+            UserDefaults.standard.set(_role, forKey: "role")
             
             let db = Firestore.firestore()
             
